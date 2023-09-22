@@ -3,13 +3,30 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/videoControls.js"></script>
 	<title></title>
+	
 </head>
 <body>
-	<script>
-		let first = "Pastor";
-		let last = "Canayo";
-		let name = first + last;
-	</script>
+	<video width="320" height="240" class="fixingBike" id="bike">
+		  <source src="images/fixing.mp4" type="video/mp4">
+		  <source src="movie.ogg" type="video/ogg">
+		Your browser does not support the video tag.
+	</video>
+
+	<div id="controls">
+		<div id="errorDiv" style="color:red;"></div>
+		<button id="slowerButton">Slower</button>
+		<button id="backButton">Rewind</button>
+		<button id="playButton">Play</button>
+		<button id="fasterButton">Faster</button>
+		<button id="muteButton">Mute</button>
+		
+		<br> <br> <br>
+	</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", initializeVideoPlayerControls, false);
+</script>
 </body>
 </html>
