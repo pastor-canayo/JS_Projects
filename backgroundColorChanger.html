@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.container{
+			display: flex;
+			border: solid;
+		    border-color: blue;
+		    justify-content: center;
+		    align-items: center;
+		    height: 100vh;	    
+		}
+		.box{
+			text-align: center;
+			color: white;
+			font-size: 40px;
+			width: 200px;
+			height: 200px;
+			padding: 20px;
+			border: 3px solid black;	
+		}
+		.red{background: red;}
+		.yellow{background: yellow; color: blue;}
+		.green{background: green;}
+		.purple{background: purple;}
+	</style>
+</head>
+<body>
+	<div id="container" class="container" >
+		<div id="red" class="red box">Red</div>
+		<div id="yellow" class="yellow box">Yellow</div>
+		<div id="green" class="green box">Green</div>
+		<div id="purple" class="purple box">Purple</div>
+	</div>
+	<script type="text/javascript">
+		let red = document.getElementById('red');
+		let yellow = document.getElementById('yellow');
+		let green = document.getElementById('green');
+		let purple = document.getElementById('purple');
+
+		red.addEventListener('click', function getRed(){
+			let container1 = document.getElementById('container')
+			container1.style.backgroundColor = 'red';
+		});
+		yellow.addEventListener('click', function getYellow(){
+			let container2 = document.getElementById('container')
+			container2.style.backgroundColor = 'yellow';
+		});
+		green.addEventListener('click', function getGreen(){
+			let container3 = document.getElementById('container')
+			container3.style.backgroundColor = 'green';
+		});
+		purple.addEventListener('click', function getPurple(){
+			let container4 = document.getElementById('container')
+			container4.style.backgroundColor = 'purple';
+		});
+		
+
+	</script>
+</body>
+</html>
