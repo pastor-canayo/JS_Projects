@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.main-container{
+			padding: 100px;
+		}
+		#car{
+			position: relative;
+		}
+		#TheForm {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	    #submitColor {
+			padding: 10px;
+			color: white;
+			font-size: 20px;
+			background: purple;
+			border-radius: 20px;
+			border: none;
+		}
+		#body-box{
+			width: 60%;
+			height: 150px;
+			margin: 0 auto;
+			background: #000;
+		}
+		#frontwheel{
+			position: absolute;
+			left: 30%;
+			top: 130px;
+			background-color: #fff;
+			border: 3px solid black;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+		}
+		#backwheel{
+			position: absolute;
+			left: 65%;
+			top: 130px;
+			background-color: #fff;
+			border: 3px solid black;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+		}
+		#text{
+			color: white;
+			font-size: 30px;
+			font-weight: 600;
+			text-align: center;
+		}
+	</style>
+
+
+</head>
+<body>
+	<div class="main-container">
+		<form id="TheForm">
+	<label>update color</label>
+    <input id="color" type="text" />
+    <br/>
+    <label>update text</label>
+    <input id="update-text" type="text" />
+    <br/>
+    <label>update front wheel color</label>
+    <input id="color2" type="text" />
+    <br/>
+   <label>update back wheel color</label>
+    <input id="color3" type="text" />
+    <br/>
+    <input id="submitColor" value="Submit" type="button" />
+</form>
+	</div>
+	
+<div id="car">
+	<div id="body-box">
+		<div id="text">Welcome to my bus</div>
+	</div>
+	<div id="frontwheel" class="wheels"></div>
+	<div id="backwheel" class="wheels"></div>
+</div>
+
+<script type="text/javascript">
+	function changeBackground() {
+	    var color1 = document.getElementById("color").value; 
+	    var div = document.getElementById('body-box');
+	    var text = document.getElementById("update-text").value; 
+	    var divtext = document.getElementById('text');
+	    var wheelcolor = document.getElementById("color2").value; 
+	    var wheeldiv = document.getElementById('frontwheel');
+	    var wheelcolor3 = document.getElementById("color3").value; 
+	    var wheeldiv3 = document.getElementById('backwheel');
+	    
+	    
+	    div.style.backgroundColor = color1;
+	    divtext.innerHTML = text;
+	    wheeldiv.style.backgroundColor = wheelcolor;
+	    wheeldiv3.style.backgroundColor = wheelcolor3;
+	   
+}
+
+document.getElementById("submitColor").addEventListener("click", changeBackground, false);
+</script>
+</body>
+</html>
