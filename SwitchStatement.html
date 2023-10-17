@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>Switch Statement</h1>
+	<div>
+		<div id="message"></div>
+		<div id="price"></div>
+		<img id="img" src="images/slin.jpg">
+	</div>
+	<script>
+		let number = parseInt(prompt("Enter a number 1-5 to choose a sport car," + 
+			"1 - Lamborghini, 2 - Ferrari, 3 - Bugatti, 4 - Toyota, 5 - Motorcycle"));
+
+		let images = ["images/lambo.jpg", "images/ferrari.jpg", "images/bugatti.jpg", "images/toyota.jpg", "images/motorcycle.jpg"];
+
+		switch(number){
+		 	case 1: {
+		 			let lamborghini = document.getElementById("message");
+		 			lamborghini.innerHTML = "Lamborghini";
+		 			lamborghini.style.color = "orange";
+		 			lamborghini.style.fontSize = "50px";
+
+		 			let price = document.getElementById("price");
+		 			price.innerHTML = "400,000 USA Dollars";
+		 			price.style.color = "orange";
+		 			price.style.fontSize = "50px";
+
+		 			document.getElementById("img").src = images[0];
+		 	}
+		 	break; 
+		 	case 2: {
+		 			let ferrari = document.getElementById("message");
+		 			ferrari.innerHTML = "Ferrari";
+		 			ferrari.style.color = "red";
+		 			ferrari.style.fontSize = "50px";
+
+		 			let price = document.getElementById("price");
+		 			price.innerHTML = "200,000 USA Dollars";
+		 			price.style.color = "red";
+		 			price.style.fontSize = "50px";
+
+		 			document.getElementById("img").src = images[1];
+		 	}
+		 	break; 
+		 	case 3: {
+		 			let bugatti = document.getElementById("message");
+		 			bugatti.innerHTML = "Bugatti";
+		 			bugatti.style.color = "blue";
+		 			bugatti.style.fontSize = "50px";
+
+		 			let price = document.getElementById("price");
+		 			price.innerHTML = "1,000,000 USA Dollars";
+		 			price.style.color = "blue";
+		 			price.style.fontSize = "50px";
+
+		 			document.getElementById("img").src = images[2];
+		 	}
+		 	break; 
+		 	case 4: {
+		 			let toyota = document.getElementById("message");
+		 			lamborghini.innerHTML = "Toyota";
+		 			lamborghini.style.color = "black";
+		 			lamborghini.style.fontSize = "50px";
+
+		 			let price = document.getElementById("price");
+		 			price.innerHTML = "5,000 USA Dollars";
+		 			price.style.color = "black";
+		 			price.style.fontSize = "50px";
+
+		 			document.getElementById("img").src = images[3];
+		 	}
+		 	break; 
+		 	case 5: {
+		 			let motorcycle = document.getElementById("message");
+		 			motorcycle.innerHTML = "Motorcycle";
+		 			motorcycle.style.color = "purple";
+		 			motorcycle.style.fontSize = "50px";
+
+		 			let price = document.getElementById("price");
+		 			price.innerHTML = "10,000 USA Dollars";
+		 			price.style.color = "purple";
+		 			price.style.fontSize = "50px";
+
+		 			document.getElementById("img").src = images[4];
+		 	}
+		 	break; 
+		 default:
+		 	document.getElementById("message").innerHTML = "Sorry, Wrong Choice";
+		}
+	</script>
+</body>
+</html>
